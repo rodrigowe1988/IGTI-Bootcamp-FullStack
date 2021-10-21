@@ -1,0 +1,55 @@
+<!--
+	-Trabalhando com loops em JS
+	-Alterando conteúdo dos itens da lista
+	-Utilizando o DOM
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Loop with Javascript in a list of elements</title>
+	<style>
+		#newDiv {
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			text-align: center;
+			margin-left: auto;
+    		margin-right: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="div">
+		<h1>Título</h1>
+		<p id="paragraph-1">Parágrafo 1</p>
+		<p id="paragraph-1">Parágrafo 2</p>
+		<ul>
+			<li class="item">item 1</li>
+			<li class="item">item 2</li>
+			<li class="item">item 3</li>
+		</ul>
+	</div>
+	<hr>
+	<div id="newDiv">
+		teste
+	</div>
+	<script>
+		//atribuindo à variável items os elementos da lista
+		let items = document.querySelectorAll('.item');
+		console.log(items);
+
+		//loop para alterar os elementos
+		for (let i = 0; i < items.length; i++) {
+			items[i].textContent = `Value ${i + 1}`;
+		}
+
+		//trocando a cor de background de uma div com JS
+		let newDiv = document.querySelector("#newDiv");
+
+		newDiv.style.backgroundColor = "red";
+	</script>
+</body>
+</html>

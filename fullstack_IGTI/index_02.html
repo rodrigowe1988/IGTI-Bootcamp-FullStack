@@ -1,0 +1,35 @@
+<!--
+	-Adicionando e removendo classes com JS
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Add and remove Class</title>
+	<style>
+		div {
+			width:  100px;
+			height: 100px;
+			border: 1px solid black;
+		}
+
+		.ok {
+			background-color: green;
+		}
+
+		.alert {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class='ok'></div>
+	<script>
+		let div = document.querySelector("div")
+		div.classList.remove("ok")
+		div.classList.add("alert")
+	</script>
+</body>
+</html>
