@@ -8,21 +8,83 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Forms</title>
+	<style>
+		body {
+  			padding: 10px;
+  			font-family: Arial;
+		}
+
+		.field {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
+			margin-bottom: 5px;
+		}
+
+		span {
+			width: 250px;
+		}
+
+		form {
+			padding: 10px;
+  			width: 600px;
+  			margin: 0 auto;
+  			background-color: rgba(0, 0, 0, 0.342);
+			border-radius: 10px;
+		}
+
+	</style>
 </head>
 <body>
 	<form>
-		<div class="field">
-			<span>Exemplo de input de texto:</span>
-			<label>
-				<input type="text" id="text" value="Texto">
-			</label>
+		<div class='field'>
+		  <span>Exemplo de input de texto:</span>
+		  <label>
+			<input type='text' id='text' value='Texto'>
+		  </label>
 		</div>
 
-		<div class="field">
-			<span>Exemplo de input numérico:</span>
-			<label></label>
+		<div class='field'>
+		  <span>Exemplo de input numérico:</span>
+		  <label>
+			<input type='number' id='text' value='100'>
+		  </label>
 		</div>
+
+		<div class='field'>
+		  <span>Exemplo de input de cor:</span>
+		  <input type='color' value='#ff0000'>
+		</div>
+
+		<div class='field'>
+		  <span>Exemplo de checkbox:</span>
+		  <label> <input type='checkbox'> Clique aqui</label>
+		</div>
+
+		<div class='field'>
+		  <span>Exemplo de radio button:</span>
+		  <div>
+			<label><input type='radio' name='comida'> Bolacha</label>
+			<label><input type='radio' name='comida' checked> Biscoito</label>
+		  </div>
+		</div>
+
+		<div class='field'>
+		  <span>Exemplo de textarea:</span>
+		  <textarea rows='10' cols='40'></textarea>
+		</div>
+
+		<input id='submit' type='submit' value='Teste de botão que printa no console'>
 	</form>
+	<script>
+		let button = document.querySelector('form');
+
+		button.addEventListener('submit', function(event) {
+  		event.preventDefault();
+  		console.log('click');
+})
+	</script>
 </body>
 </html>
