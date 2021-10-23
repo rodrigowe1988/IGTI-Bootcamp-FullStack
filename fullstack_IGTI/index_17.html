@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Array.sort()</title>
+</head>
+<body>
+	<h1>Abra o console</h1>
+	<script src="js/sort.js"></script>
+	<p>A função <b>sort</b> percorre o array e aplica o algoritmo de ordenação informado na função do parâmetro.
+	<p>A função sort é mutável, ou seja, altera o próprio array.</p>
+	<p>Se não há função de ordenação no parâmetro, sort converte os valores para
+		Strings e faz a ordenação a partir dos caracteres. Isso gera problemas com arrays
+		com números, por exemplo, pois “80” < “9” retorna verdadeiro. Por isso é uma boa
+		prática sempre informar a função de ordenação.</p>
+	<p>A função de ordenação a ser implementada recebe dois parâmetros e, em
+		regra, exige um retorno de:</p>
+	<ul>
+		<li>Número negativo → Primeiro elemento é “menor” que o segundo.</li>
+		<li>Zero (0) → Elementos equivalentes.</li>
+		<li>Número positivo → Primeiro elemento é “maior” que o segundo.</li>
+	</ul>
+</body>
+</html>
