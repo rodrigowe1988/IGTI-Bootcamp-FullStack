@@ -1,0 +1,34 @@
+<!--
+	->trabalhando com eventos em JS
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Events Javascript</title>
+	<style>
+		p {
+			padding: 10px;
+			font-family: Arial;
+			font-size: 1.5rem;
+		}
+	</style>
+</head>
+<body>
+	<p>Parágrafo</p>
+</body>
+<script>
+	console.log("Escopo Global");
+	let p1 = document.querySelector("p");
+	p1.textContent = "Alterando o texto de forma arriscada";
+
+	window.addEventListener("load", start);
+	function start() {
+		console.log("Aqui é garantido que a página já está carregada");
+		let p2 = document.querySelector("p");
+		p2.textContent = "Alterado de forma segura";
+	}
+</script>
+</html>

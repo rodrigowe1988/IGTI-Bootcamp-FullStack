@@ -33,6 +33,7 @@ const array3 = [
   },
 ];
 
+//apesar de ter somente uma instrução, deixei o return para mostrar como uma arrow function pode ser escrita de outra forma
 // Ordenando objetos por "instrumento"
 console.log(array3.sort((a, b) => {
   return a.instrument.localeCompare(b.instrument);
