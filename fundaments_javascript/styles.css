@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+.myPhoto {
+	max-width: 300px;
+	border-radius: 50%;
+}
+
+.changeCSSWithJS {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.h2Test {
+  color: blue;
+}
+
